@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  graphql:
+    build:
+      context: ./golang
+      dockerfile: Dockerfile
+    image: dlcurado/graphql:latest
+    container_name: graphql
+    tty: true
+    volumes:
+      - ./golang:/usr/src/app
